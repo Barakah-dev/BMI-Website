@@ -312,14 +312,14 @@ nav{
 /* Footer */
 footer{
   margin: 50px auto 0;
-  padding: 55px 30px 45px;
+  padding: 55px 0 45px;
   background-color: var(--light-1);
 }
 .dark-footer{
   background-color: var(--dark-2);
 }
 .info{
-  /* padding: 25px; */
+  padding: 0 30px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -528,7 +528,7 @@ small{
   }
   .health-tips i{
     width: 10%;
-     padding: 10px;
+    padding: 10px;
     /*text-align: center;
     border-radius: 20px;
     margin: 10px 0 20px; */
@@ -549,6 +549,16 @@ small{
   .faq{
     margin: 0 auto;
     padding: 50px 30px 0;
+  }
+  footer{
+
+  }
+  .info{
+    margin: 0 auto;
+    padding: 0 40px 0;
+  }
+  .info .head p{
+    padding: 0 40px 0;
   }
 
   .result-meaning,
@@ -594,7 +604,7 @@ small{
   .limitations .card{
     position: static;
     width: 78vw;
-/*     height: 150px; */
+    /* height: 150px; */
   }
   .email{
     width: 45vw;
