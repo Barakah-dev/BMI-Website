@@ -1,0 +1,2 @@
+A BMI website built with HTML, CSS and javaScript. It provides information about Body Mass Index, allows you check your BMI and interpretes the result, and has a quiz page where you can evaluate your knowledege.
+It also has day and night mode properties.

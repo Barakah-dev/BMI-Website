@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUIZ</title>
+  <link rel="stylesheet" href="quiz.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://kit.fontawesome.com/ef1328a087.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav id="nav">
+    <a class="logo" href="index.html">BMI APP</a>
+
+    <div class="menu" >
+      <i class="fa-regular fa-circle-xmark menu-close"></i>
+      <ul class="navlinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="bmi.html">Check BMI</a></li>
+        <li class="current"><a href="quiz.html">Quiz</a></li>
+        <div class="mode">
+          <i class="bi bi-moon-stars-fill night"></i>
+          <i class="bi bi-brightness-high-fill day hidden"></i>
+        </div>
+      </ul>
+    </div>
+    <i class="fa-solid fa-bars menu-open" id="menu-open"></i>
+  </nav>
+
+  <div class="quiz-container">
+    <h1>Quiz</h1>
+    <div class="quiz">
+      <div class="question-div">
+        <h4 class="question-num" id="question-num"><i class="fa-solid fa-circle-question"></i>Question</h4>
+        <h4 class="question" id="question">Question</h4>
+      </div>
+      <div class="answer-btns" id="answer-btns">
+        <button class="btn">answer 1</button>
+        <button class="btn">answer 2</button>
+        <button class="btn">answer 3</button>
+        <button class="btn">answer 4</button>
+      </div>
+      <div class="nav-btn">
+        <button class="next-btn" id="next-btn" onclick="nextButtonClick();">Next</button>
+      </div>
+      <div class="explanation-div" id="explanation-div">
+        <i class="fa-regular fa-lightbulb"></i>
+        <p class="explanations" id="explanations">Explation</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

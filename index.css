@@ -1,0 +1,602 @@
+:root{
+  --bg-light: #fff;
+  --bg-dark: black;
+  --font-light: black;
+  --font-dark: #fff;
+  --color-1: black;
+  --color-2: rgb(31, 5, 102);
+  --orange-1: rgb(238, 90, 16);
+  --orange-2: rgb(238, 120, 16);
+  --orange-3: rgb(238, 86, 16);
+  --food-1: pink;
+  --food-2: rgb(231, 22, 113);
+  --exercise-1: rgb(252, 255, 192);
+  --exercise-2: rgb(180, 149, 25);
+  --sleep-1: rgb(170, 218, 234);
+  --sleep-2: rgb(38, 92, 110);
+  --limitations-bg: rgb(249, 249, 250);
+  --limitations-shadow: rgb(223, 226, 227);
+  --faq-dark: black;
+  --faq-light: #fff;
+  --dark-1: rgb(33, 99, 156);
+  --dark-2: rgb(21, 65, 101);
+  --light-1: aliceblue;  
+  --light-2: rgb(212, 230, 245);
+  --red: red;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+body{
+  background-color: var(--bg-light);
+  color: var(--font-light);
+  height: 100vh;
+}
+.dark-body{
+  background-color: var(--bg-dark);
+  color: var(--font-dark);
+}
+nav{
+  background-color: var(--bg-light);
+  height: 65px;
+  padding: 20px ;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.menu{
+  position: relative;
+}
+.menu-close, .menu-open{
+  cursor: pointer;
+  display: none !important; 
+}
+.logo{
+  text-decoration: none;
+  color: var(--color-1);
+  font-weight: bolder;
+  font-size: 23px;
+}
+.navlinks{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  justify-items: center;
+  gap: 3vmin;
+}
+.navlinks a{
+  text-decoration: none;
+  color:  var(--color-1);
+  font-size: 18px;
+  font-weight: 600;
+}
+.navlinks a:hover{
+  color:  var(--color-2);
+  transform: scale(1.1);
+}
+.navlinks .current a{
+  color:var(--orange-1);
+  font-weight: 600;
+  transform: scale(1.1);
+}
+.hidden{
+  display: none;
+}
+.mode{
+  padding: 2px 0 0 20px;
+  color: var(--font-light) ;
+}
+.mode i{
+  position: relative;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Body */
+.container{
+  margin: 0 auto;
+}
+.intro{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 50px auto;
+  padding: 50px;
+}
+.intro .left{
+  padding-top: 20px;
+}
+.intro .left h1{
+  font-size: 45px;  
+}
+.intro .left p{
+  margin: 25px 0 40px;
+  font-size: 19px;  
+}
+.intro .left button{
+  padding: 15px;
+  border: none;
+  background-color:var(--orange-2);;
+  border-radius: 25px;
+  width: 150px;
+  transition: all ease 1s;
+}
+.intro .left button:hover{
+  background-color:var(--orange-3);;
+}
+.intro .left button a{
+  text-decoration: none;
+  color: #fff; 
+}
+.intro .left button a:hover{
+  color: aliceblue;
+  transition: all ease 1s;
+}
+.intro img{
+  min-height: 490px;
+  width: 60vw;
+}
+.result-meaning{
+  margin: 70px auto;
+  padding: 0 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.result-meaning img{
+  width: 50vw;
+}
+.result-meaning .result{
+  width: 50vw;
+  padding-top: 3em;
+}
+.result h1{
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+.health-tips{
+  background-color: var(--light-1);
+  padding: 100px 35px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.dark-health-tips{
+  background-color: var(--dark-2);
+}
+.health-tips i{
+  padding: 12px;
+  border-radius: 24px;
+  margin: 10px 0 20px;
+}
+.food{
+  background-color: var(--food-1);
+  color: var(--food-2);
+  box-shadow: 5px 8px 10px  var(--food-2);
+}
+.exercise{
+  background-color: var(--exercise-1);
+  color: var(--exercise-2);
+  box-shadow: 5px 8px 10px  var(--exercise-2);
+}
+.sleep{
+  /* background-color: rgb(170, 218, 234); */
+  background-color: var(--sleep-1);
+  color: var(--sleep-2);
+  box-shadow: 5px 8px 10px  var(--sleep-2);
+}
+.health-tips h2{
+  margin: 10px 0;
+}
+.health-tips p{
+  font-size: 17px;
+}
+.limitations-div{
+  margin: 20px auto;
+  padding: 60px 25px;
+  position: relative;
+  height: 620px;
+}
+.limitation{
+  width: 40%;
+}
+.limitation h1{
+  font-size: 27px;
+}
+.limitation p{
+  padding: 10px 0 2px;
+}
+.limitations{
+  margin: 0 auto;
+}
+.card{
+  position: absolute;
+  padding: 20px;
+  width: 350px;
+  background-color: var(--light-1);
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: 5px 5px 8px var(--limitations-shadow)
+}
+.dark-card{
+  background-color: var(--dark-2);
+  box-shadow: 5px 5px 8px var(--sleep-1)
+}
+.gender{
+  top: 50px;
+  right: 160px;
+}
+.age{
+  top: 255px;
+  right: 470px;
+}
+.muscle{
+  top: 255px;
+  right: 80px;
+}
+.pregnancy{
+  top: 440px;
+  right: 650px;
+}
+.race{
+  top: 440px;
+  right: 260px;
+}
+
+/* FAQ */
+.faq{
+  margin: 0 auto;
+  padding: 50px 30px 60px;
+}
+.title{
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.accordion-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 700px;
+}
+.accordion{
+ padding:  18px 15px;
+}
+.odd{
+  background-color: var(--light-1);
+}
+.odd-dark{
+  background-color: var(--dark-1);
+}
+.even{
+  background-color: var(--light-2);
+}
+.even-dark{
+  background-color: var(--dark-2);
+}
+.question{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-top: 4px;
+}
+.hidden{
+  display: none !important;
+}
+.question h3{
+  font-size: 21px;
+  width: 85%;
+}
+.plus, .minus{
+  width: 18px;
+  position: absolute;
+  right: 5px;
+  bottom: 4px;
+  cursor: pointer;
+}
+.response{
+  font-size: 17px;
+  padding-top: 15px;
+}
+
+/* Footer */
+footer{
+  margin: 50px auto 0;
+  padding: 55px 0 45px;
+  background-color: var(--light-1);
+}
+.dark-footer{
+  background-color: var(--dark-2);
+}
+.info{
+  /* padding: 25px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin:  0 auto;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.head{
+  width: 400px;
+}
+.head h4{
+  color:var(--orange-1);
+  margin-bottom: 10px;
+}
+.telephone{
+  color:var(--orange-1);
+}
+.addy{
+  margin: 10px 25px 10px 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+.email{
+  padding: 15px;
+  border: none;
+  outline: none;
+  width: 70%;
+  background-color: transparent;
+}
+.submit{
+  border: none;
+  border-radius: 20px;
+  background-color: var(--orange-1);
+  color: white;
+  cursor: pointer;
+  width: 25%;
+}
+small{
+  text-align: left;
+  font-weight: bold;
+  color: var(--red);
+}
+.icons{
+  display: flex;
+  justify-content: center;
+}
+.icon{
+  padding: 0 20px;
+  color: var(--font-light);
+}
+.dark-icon{
+  color: var(--font-dark);
+}
+.result-meaning,
+.health-tips,
+.limitations-div,
+.faq{
+  animation: CSSscroll ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
+}
+@keyframes CSSscroll{
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .intro .left{
+    padding-top: 20px;
+  }
+  .intro .left h1{
+    font-size: 33px;  
+  }
+  .intro .left p{
+    margin: 20px 0 35px;
+    font-size: 18px;  
+  }
+  .intro img{
+    width: 55vw;
+  }
+  .result-meaning img{
+    width: 47vw;
+  }
+  .result-meaning .result{
+    width: 50vw;
+    padding-top: 2em;
+  }
+  .limitations-div{
+    margin: 0 auto;
+    padding: 60px 3rem 0;
+    height: auto;
+  }
+  .limitation{
+    text-align: center;
+    width: 100%;
+  }
+  .limitations{
+    position: relative;
+    margin: 1rem auto;
+    padding: .5rem 4rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+  }
+  .limitations .card{
+    position: static;
+    width: 37vw;
+    max-width: 400px;
+  }
+  .race{
+    position: absolute;
+    right: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .menu{
+    background-color: var(--light-1);
+    height: 100vh;
+    width: 60vw;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+  }
+  .dark-menu{
+    background-color: var(--bg-dark);
+  }
+  nav.toggle .menu{
+    right: 0%;
+  }
+  .navlinks{
+    flex-direction: column;   
+    padding: 100px 10px;
+    align-items: center;
+  }
+  .navlinks li{
+    padding: 20px;
+  }
+  .menu .menu-close{
+    display: block !important;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    color: red;
+  }
+  nav .menu-open{
+    display: block !important;
+    position: absolute;
+    top: 28px;
+    right: 20px;
+    color: var(--color-1);
+  }
+  .mode{
+    padding: 15px 0 0 20px;
+  }
+  .intro{
+    grid-template-columns: 1fr;
+    margin-bottom: 0;
+  }
+  .intro .left{
+    text-align: center;
+  }
+  .intro .left h1{
+    text-align: center;
+    font-size: 25px;  
+  }
+  .intro .left p{
+    margin: 25px 0 40px;
+    font-size: 19px;  
+  }
+  .intro img{
+    display: none;
+  }
+  .result-meaning{
+    margin-top: 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .result-meaning img{
+    width: 100%;
+  }
+  .result-meaning .result{
+    width: 100%;
+    padding-top: 2em;
+  }
+  .health-tips{
+    padding: 70px 20px;
+    flex-direction: column;
+  }
+  .health-tips .tip{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    gap: 25px;
+  }
+  .health-tips i{
+    width: 10%;
+     padding: 10px;
+    /*text-align: center;
+    border-radius: 20px;
+    margin: 10px 0 20px; */
+  }
+  .health-tips h2{
+    font-size: 22px;
+  }
+  .health-tips p{
+    font-size: 16px;
+  }
+  .info{
+    flex-direction: column;
+    text-align: center;
+  }
+  .addy{
+    margin: 10px 40px;
+  }  
+  .faq{
+    margin: 0 auto;
+    padding: 50px 30px 0;
+  }
+
+  .result-meaning,
+  .health-tips,
+  .limitations-div,
+  .faq{
+    animation: CSSscroll ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 100% cover 100%;
+    opacity: 1;
+  }
+  @keyframes CSSscroll{
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  footer{
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .limitations-div{
+    margin: 0 auto;
+    padding: 60px 3rem 0;
+    height: auto;
+  }
+  .limitation{
+    text-align: center;
+    width: 100%;
+  }
+  .limitations{
+    position: relative;
+    margin: 1rem auto;
+    padding: .5rem 4rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+  }
+  .limitations .card{
+    position: static;
+    width: 78vw;
+    height: 150px;
+  }
+  .email{
+    width: 45vw;
+  }  
+}
