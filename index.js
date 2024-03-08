@@ -95,7 +95,7 @@ function validateEmail() {
     return false;
   } 
   else{
-    emailMessage.innerHTML = '<i class="fa-solid fa-check-circle"></i>' + 'success';
+    emailMessage.innerHTML = '<i class="fa-solid fa-check-circle"></i>' + ' success';
     emailMessage.style.color = 'green';
     return true;
   }
