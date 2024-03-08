@@ -312,7 +312,7 @@ nav{
 /* Footer */
 footer{
   margin: 50px auto 0;
-  padding: 55px 0 45px;
+  padding: 55px 30px 45px;
   background-color: var(--light-1);
 }
 .dark-footer{
@@ -594,7 +594,7 @@ small{
   .limitations .card{
     position: static;
     width: 78vw;
-    height: 150px;
+/*     height: 150px; */
   }
   .email{
     width: 45vw;
