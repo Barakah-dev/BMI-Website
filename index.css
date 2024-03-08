@@ -319,7 +319,7 @@ footer{
   background-color: var(--dark-2);
 }
 .info{
-  padding: 0 30px 0;
+  padding: 0 30px 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -552,10 +552,6 @@ small{
   }
   footer{
 
-  }
-  .info{
-    margin: 0 auto;
-    padding: 0 40px 0;
   }
   .info .head p{
     padding: 0 40px 0;
